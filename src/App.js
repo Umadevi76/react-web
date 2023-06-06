@@ -6,12 +6,13 @@ import TextForm from './components/TextForm';
 import './App.css'
 import About from './components/About';
 import Alert from './components/Alert';
-import {
+{/* import {
   BrowserRouter as Router,
   Routes,
   Route,
   Link
 } from "react-router-dom";
+*/}
 
 
 
@@ -44,18 +45,20 @@ function App() {
 }
   return (
     <>
-    <Router>
+    {/* <Router> */}
      <Navbar title="TextUtils" page="Home" mode={mode} toggleMode={toggleMode}/>
       <Alert alert={alert} />
       <div className='container'>
-      <Routes>   
+      {/* <Routes>   
           <Route exact path="/about" element={<About />} />
           <Route exact path="/" element={<TextForm heading="Enter the text to analyse" showAlert={showAlert} mode={mode}/>} />
-      </Routes>
+  </Routes> */}
+
+    <TextForm heading="Enter the text to analyse" showAlert={showAlert} mode={mode}/>
       </div>
          
     
-    </Router>
+   {/* </Router> */}
     </>
   )
 }
